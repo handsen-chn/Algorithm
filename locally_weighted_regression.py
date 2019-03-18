@@ -10,6 +10,7 @@
                    2019/1/30:
 -------------------------------------------------
 """
+#https://yoyoyohamapi.gitbooks.io/mit-ml/content/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/codes/%E5%B1%80%E9%83%A8%E5%8A%A0%E6%9D%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92.html
 __author__ = 'yinjun8'
 import os
 os.chdir('C:\Users\yinjun8\Desktop')
