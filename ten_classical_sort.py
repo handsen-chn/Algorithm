@@ -100,6 +100,26 @@ class ten_classical_sort:
 		# 				arr[j+gap] = arr[j]
 		# 			arr[j+gap] = temp
 		return arr
+	def quick_sort(array, left, right):
+		#https://blog.csdn.net/razor87/article/details/71155518
+		#由于快排是原地排序，因此不需要返回array。
+		#array如果是个列表的话，可以通过len(array)求得长度，但是后边递归调用的时候必须使用分片，
+		#而分片执行的原列表的复制操作，这样就达不到原地排序的目的了，所以还是要传上边界和下边界的。
+	    if left >= right:
+	        return
+	    low = left
+	    high = right
+	    key = array[low]
+	    while left < right:
+	        while left < right and array[right] > key:
+	            right -= 1
+	        array[left] = array[right]
+	        while left < right and array[left] <= key:
+	            left += 1
+	        array[right] = array[left]
+	    array[right] = key
+	    quick_sort(array, low, left - 1)
+	    quick_sort(array, left + 1, high)
 
 if __name__ == '__main__':
 	a=ten_classical_sort()
